@@ -3,6 +3,11 @@
     padding: 0px;
 }
 
+:root{
+    --dark-purple:rgb(25, 25, 48);
+    --font-color:aliceblue;
+    --med-purple:rgb(47, 47, 65);
+}
 
 body{
     display: flex;
