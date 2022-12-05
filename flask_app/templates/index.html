@@ -13,33 +13,49 @@
     </div>
 
     <h2> Welcome! Join MovieTime to experience your movies in a new light. Get ready to rate, comment, and like your recent movies. Keep track of all your thoughts!</h2>
-    <div >
-        <form id="registration">
-            <p> Enter your information so we can get you started</p>
-            <label for="first_name"> First Name:</label>
-            <input type="text" placeholder="first name" name="first_name">
-            <label for="last_name"> Last Name:</label>
-            <input type="text" placeholder="last name" name="last_name">
-            <label for="username"> Username: </label>
-            <input type="text" placeholder="username" name="username">
-            <label for="email"> Email: </label>
-            <input type="text" placeholder="email" name="email">
-            <label for="password"> Password: </label>
-            <input type="password" id="password"placeholder="password" name="password">
-            <label for="c-password"> Confirm your password:</label>
-            <input type="password" id="confirm" placeholder="Confirm Password">
-            <button type="submit"> Register</button>
-            <a href=""> Already have an account?</a>
-        </form>
-    </div>
-    <div>
-        <form id="login">
-            <p> Login </p>
-            <label for="email"> Email:</label>
-            <input type="text" placeholder="email" name="email">
-            <label for="password"> Password: </label>
-            <input type="password" placeholder="password" name="password">
-        </form>
+    <div class="slider"></div>
+    <div class="btn">
+        <button class="login">Login</button>
+        <button class="signup">Signup</button>
+    </div>        
+    <div id="form-section">
+        <div >
+            <form id="registration">
+                <p> Enter your information so we can get you started</p>
+                {% with messages = get_flashed_messages(category_filter=['register']) %}
+                    {% if messages %}
+                    <div class="alert alert-danger" role="alert">                                                   
+                        {% for message in messages %}
+                        <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                {% endwith %}
+                <label for="first_name"> First Name:</label>
+                <input type="text" placeholder="first name" name="first_name">
+                <label for="last_name"> Last Name:</label>
+                <input type="text" placeholder="last name" name="last_name">
+                <label for="username"> Username: </label>
+                <input type="text" placeholder="username" name="username">
+                <label for="email"> Email: </label>
+                <input type="text" placeholder="email" name="email">
+                <label for="password"> Password: </label>
+                <input type="password" id="password"placeholder="password" name="password">
+                <label for="c-password"> Confirm your password:</label>
+                <input type="password" id="confirm" placeholder="Confirm Password">
+                <button type="submit"> Register</button>
+                <a href=""> Already have an account?</a>
+            </form>
+        </div>
+        <div>
+            <form id="login">
+                <p> Login </p>
+                <label for="email"> Email:</label>
+                <input type="text" placeholder="email" name="email">
+                <label for="password"> Password: </label>
+                <input type="password" placeholder="password" name="password">
+            </form>
+        </div>
     </div>
     <div id="film">
     </div>
