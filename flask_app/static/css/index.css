@@ -33,26 +33,10 @@ p{
     padding-bottom: 10px;
 }
 
-#registration{
-    display: flex;
-    flex-direction:column;
-    border: 1px solid rgb(174, 203, 226);
-    box-shadow: rgb(90, 116, 145) 0px 20px 30px -10px;
-    align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: rgb(47, 47, 65);
-    width: 450px;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 15px;
-    position: relative;
-    z-index: 1;
-}
-
 
 input {
     font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
     border: none;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -71,11 +55,6 @@ input {
     background-color: rgb(252, 244, 235);
     box-shadow: rgba(241, 241, 245, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     cursor: pointer;
-}
-
-#registration a {
-    padding-top: 10px;
-    color: antiquewhite;
 }
 
 #film{
@@ -116,11 +95,11 @@ input {
 
 }
 
-#login{
-    opacity: 0;
-    display: flex;
-    flex-direction:column;
-    position: absolute;
+
+
+.container{
+    /* display: flex;
+    flex-direction:column; */
     border: 1px solid rgb(174, 203, 226);
     box-shadow: rgb(90, 116, 145) 0px 20px 30px -10px;
     align-items: center;
@@ -131,8 +110,71 @@ input {
     font-size: 20px;
     text-align: center;
     border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    /* z-index: 1; */
+}
 
+.btn {
+    height: 60px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 10px 10px 30px rgb(90, 116, 145);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login,
+.signup {
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    position: relative;
 }
 
 
 
+.slider{
+    height: 60px;
+    width:150px;
+    border-radius: 50px;
+    background-image: linear-gradient(var(--med-purple), var(--font-color));
+    top: 50px;
+    left:74px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+.moveslider{
+    left: 224.5px;
+}
+
+.form-section{
+    display: flex;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    left: 0px;
+}
+
+.form-section-move{
+    left: -465px;
+}
+
+#registration,
+#login {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px;
+}
+
+#registration{
+    margin-right: 150px;
+    padding-left: 100px;
+
+}
