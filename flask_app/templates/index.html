@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..\static\css\index.css">
-    <title>Document</title>
+    <title>MovieTime</title>
 </head>
 <body>
     <div id="film">
@@ -22,7 +22,7 @@
         </div>
         <div class="form-section">
             <!-- <div > -->
-                <form id="registration">
+                <form id="registration" action="/register" method="post">
                     <p> Enter your information so we can get you started</p>
                     {% with messages = get_flashed_messages(category_filter=['register']) %}
                         {% if messages %}
@@ -43,18 +43,28 @@
                     <input type="text" placeholder="email" name="email">
                     <label for="password"> Password: </label>
                     <input type="password" id="password"placeholder="password" name="password">
-                    <label for="c-password"> Confirm your password:</label>
-                    <input type="password" id="confirm" placeholder="Confirm Password">
-                    <button type="submit"> Register</button>
+                    <label for="confirm"> Confirm your password:</label>
+                    <input type="password" id="confirm" placeholder="Confirm Password" name="confirm">
+                    <button class="submitBut" type="submit"> Register</button>
                 </form>
             <!-- </div> -->
             <!-- <div> -->
-                <form id="login">
-                    <p> Login </p>
+                <form id="login" action="/login" method="post">
+                <p> Already have an account? Sign in to see the excitment! </p>
+                {% with messages = get_flashed_messages(category_filter=['login']) %}
+                    {% if messages %}
+                    <div class="alert alert-danger" role="alert">                                                   
+                        {% for message in messages %}
+                        <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                {% endwith %}
                     <label for="email"> Email:</label>
                     <input type="text" placeholder="email" name="email">
                     <label for="password"> Password: </label>
                     <input type="password" placeholder="password" name="password">
+                    <button class="submitBut" type="submit"> Login</button>
                 </form>
             <!-- </div> -->
         </div>

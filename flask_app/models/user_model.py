@@ -1,4 +1,5 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+from flask_app import app
 from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt (app)
 import re	# the regex module
@@ -97,6 +98,7 @@ class User:
             is_valid= False
         if user['password'] != user['confirm']:
             flash("Passwords don't match","register")
+            is_valid= False
         return is_valid
     
     @staticmethod
