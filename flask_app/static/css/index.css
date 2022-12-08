@@ -46,7 +46,7 @@ input {
     background-color: rgb(252, 244, 235);
 }
 
-#registration button{
+.submitBut{
     font-size: 15px;
     height: 30px;
     width:75px;
@@ -140,7 +140,7 @@ input {
     height: 60px;
     width:150px;
     border-radius: 50px;
-    background-image: linear-gradient(var(--med-purple), var(--font-color));
+    background-image: linear-gradient(var(--med-purple), var(--font-color), var(--med-purple));
     top: 50px;
     left:74px;
     position: absolute;
@@ -178,3 +178,9 @@ input {
     padding-left: 100px;
 
 }
+
+#login p {
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+

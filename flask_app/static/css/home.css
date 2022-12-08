@@ -173,3 +173,18 @@ img {
 .demo:hover {
     opacity: 1;
 }
+
+#weekRecom {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+p {
+    padding: 30px 50px 0px 50px;
+    font-size: 20px;
+}
+
+.trailer {
+    padding-top: 75px;
+}
