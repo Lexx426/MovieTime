@@ -1,0 +1,134 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: var(--font-color);
+    box-sizing: border-box;
+
+}
+
+:root{
+    --dark-purple:rgb(25, 25, 48);
+    --font-color:aliceblue;
+    --med-purple:rgb(47, 47, 65);
+}
+
+body{
+    background-color: var(--dark-purple);
+    display: grid;
+    place-items: center;
+}
+
+nav{
+    border:1px black solid;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--med-purple);
+
+}
+
+#title{
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+}
+
+.mag-glass{
+    height: 40px;
+}
+
+nav img{
+    height: 50px;
+    width: 50px;
+    background-color: var(--med-purple);
+
+}
+
+#tabs{
+    align-items: center;
+}
+#tabs a{
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 12px;
+    align-items: center;
+    
+}
+
+button {
+    border: none;
+}
+
+
+#tabs input[type=text]{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    /* margin-right: -10px; */
+
+}
+
+div{
+    border: solid 1px black;
+}
+
+#name{
+    display: flex;
+    height: 350px;
+    width: 1200px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.main{
+    margin: 0px 0px 0px 25px;
+}
+
+.main p{
+    font-size: 30px;
+}
+
+img{
+    height: 250px;
+    width:250px;
+    border: 1px solid black;
+}
+
+h1{
+    margin-bottom: 50px;
+    font-size: 55px;
+}
+
+.container{
+    width: 1200px;
+    display: flex;
+    justify-content:space-between;
+}
+
+
+.movieInfo {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+    text-align: center;
+
+}
+.personalInfo{
+    width: 300px;
+    text-align: center;
+}
+
+.container h2{
+    font-size: 35px;
+    text-decoration: underline;
+    padding-top: 125px;
+    padding-bottom: 15px;
+}
+
+.my_movies{
+    height: 600px;
+    width:900px;
+}
