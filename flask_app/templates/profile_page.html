@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\static\css\profile_page.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div id="title">
+            <h2> MovieTime </h2>
+            <img src="\static\images\popcorn.png">
+            <!-- <a href="https://www.flaticon.com/free-icons/popcorn" title="popcorn icons">Popcorn icons created by Freepik - Flaticon</a> -->
+        </div>
+        <div id="tabs">
+            <a href="" > Profile </a>
+            <a href=""> Categories </a>
+            <a href=""> Logout </a>
+            <input type="text" placeholder="Search..">
+            <button href="">
+                <img class="mag-glass" src="\static\images\loupe.png">
+            </button>
+        </div>
+    </nav>
+    <div id="name">
+        <img src="">
+        <div class="main">
+            <h1> Example Name</h1>
+            <p> MovieTime. FunTime. SnackTime. Enjoy your profile.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="personalInfo">
+            <h2>  My information </h2>
+            <p> {{first_name}} {{last_name}} </p>
+            
+            <!-- for this jinja, you will need to put user. or whatver you name the variable in the controller -->
+            <p> {{email}} </p>
+            <p> {{username}} </p>
+        </div>
+        <div class="movieInfo">
+            
+            <div class="my_movies">
+                <h2> My Liked Movies </h2>
+                <!-- add a for loop to show all movies, or add a variable to end the forloop, tojust show some -->
+                <div class="poster">
+                </div>
+                <a href=""> Show all liked movies </a>
+            </div>
+            <div class="my_movies">
+                <h2> My Rated Movies </h2>
+                <!-- add a for loop to show all movies, or add a variable to end the forloop, tojust show some -->
+                <div class="poster">
+
+                </div>
+                <a href=""> Show all rated movies </a>
+            </div>
+            <div class="my_movies">
+                <h2> My comments</h2>
+                <!-- add a for loop to show all movies, or add a variable to end the forloop, tojust show some -->
+                <div class="poster">
+
+                </div>
+                <a href=""> Show all comments </a>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
