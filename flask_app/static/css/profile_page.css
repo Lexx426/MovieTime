@@ -38,9 +38,8 @@ nav{
     height: 40px;
 }
 
-na
 
-.poster img{
+nav img{
     height: 50px;
     width: 50px;
     background-color: var(--med-purple);
@@ -155,7 +154,8 @@ h1{
 
 .overlay{
     opacity: 0;
-    position: absolute;
+    position: relative;
+    top:-405px;
     transition: .5 ease;
     background-color:#a9b0bd;
     height: 400px;

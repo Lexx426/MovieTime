@@ -6,6 +6,66 @@ from flask_app.models.user_model import User
 from flask_bcrypt import Bcrypt 
 bcrypt = Bcrypt (app)
 
+import os
+import requests
+import json
+
+
+
+@app.route('/home')
+def home():
+    if 'user_id' not in session: 
+        flash(" You must login before you can access the website.")
+        # need to add jinja in html
+        return redirect('/')
+    data = {
+        'id': session['user_id']
+    }
+
+    # start of API code
+
+    url = "https://moviesdatabase.p.rapidapi.com/titles/x/upcoming"
+    
+    headers = {
+        "X-RapidAPI-Key": os.environ['API_KEY'],
+        "X-RapidAPI-Host": "moviesdatabase.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    api_data =json.loads(response.text)
+    # pulls data from api
+    # parses the data into a JSON format
+
+    for titles in api_data:
+        print(titles)
+        # prints out page, next, entries, results twice
+    for titles in api_data:
+        print(titles["entries"]['textType'])
+
+    return render_template("home.html", user = User.get_by_id(data))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -40,8 +100,11 @@ def login():
     session['user_id'] = user.id
     return redirect('/home')
 
-@app.route('/home')
-def home():
+
+
+
+@app.route('/profile')
+def profile():
     if 'user_id' not in session: 
         flash(" You must login before you can access the website.")
         # need to add jinja in html
@@ -49,9 +112,13 @@ def home():
     data = {
         'id': session['user_id']
     }
-    return render_template("home.html", user = User.get_by_id(data))
+    return render_template("profile_page.html", user = User.get_by_id(data))
 
 @app.route('/logout')
 def logout():
     session.clear
     return redirect('/')
+
+@app.route('/movie')
+def movie():
+    return render_template("movie.html")

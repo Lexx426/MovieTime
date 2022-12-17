@@ -15,9 +15,9 @@
             <!-- <a href="https://www.flaticon.com/free-icons/popcorn" title="popcorn icons">Popcorn icons created by Freepik - Flaticon</a> -->
         </div>
         <div id="tabs">
-            <a href="" > Profile </a>
+            <a href="/profile" > Profile </a>
             <a href=""> Categories </a>
-            <a href=""> Logout </a>
+            <a href="/logout"> Logout </a>
             <input type="text" placeholder="Search..">
             <button href="">
                 <img class="mag-glass" src="\static\images\loupe.png">
@@ -34,11 +34,11 @@
     <div class="container">
         <div class="personalInfo">
             <h2>  My information </h2>
-            <p> {{first_name}} {{last_name}} </p>
+            <p> {{user.first_name}} {{user.last_name}} </p>
             
             <!-- for this jinja, you will need to put user. or whatver you name the variable in the controller -->
-            <p> {{email}} </p>
-            <p> {{username}} </p>
+            <p> {{user.email}} </p>
+            <p> {{user.username}} </p>
         </div>
         <div class="movieInfo">
             
@@ -46,40 +46,63 @@
                 <h2> My Liked Movies </h2>
                 <!-- add a for loop to show all movies, or add a variable to end the forloop, tojust show some -->
                 <div class="poster">
-                    <img>
-                    <div class="overlay">
-                        <div class="text"> check </div>
+                    
+                    <div class="test">
+                        <img src="">
+                        <div class="overlay">
+                            <div class="text"> check </div>
+                        </div>
                     </div>
-                    <img>
-                    <div class="overlay">
-                        <div class="text"> check </div>
+
+                    <div class="test">
+                        <img src="">
+                        <div class="overlay">
+                            <div class="text"> check </div>
+                        </div>
                     </div>
-                    <img>
-                    <div class="overlay">
-                        <div class="text"> check </div>
+
+                    <div class="test">
+                        <img src="">
+                        <div class="overlay">
+                            <div class="text"> check </div>
+                        </div>
                     </div>
+                    
                 </div>
                 <a href=""> Show all liked movies </a>
             </div>
+
+
             <div class="my_movies">
                 <h2> My Rated Movies </h2>
                 <!-- add a for loop to show all movies, or add a variable to end the forloop, tojust show some -->
                 <div class="poster">
-                    <img>
-                    <div class="overlay">
-                        <div class="text"> check </div>
+                    
+                    <div class="test">
+                        <img src="">
+                        <div class="overlay">
+                            <div class="text"> check </div>
+                        </div>
                     </div>
-                    <img>
-                    <div class="overlay">
-                        <div class="text"> check </div>
+
+                    <div class="test">
+                        <img src="">
+                        <div class="overlay">
+                            <div class="text"> check </div>
+                        </div>
                     </div>
-                    <img>
-                    <div class="overlay">
-                        <div class="text"> check </div>
+
+                    <div class="test">
+                        <img src="">
+                        <div class="overlay">
+                            <div class="text"> check </div>
+                        </div>
                     </div>
                 </div>
                 <a href=""> Show all rated movies </a>
             </div>
+
+
             <div class="my_movies">
                 <h2> My comments</h2>
                 <!-- add a for loop to show all movies, or add a variable to end the forloop, tojust show some -->
@@ -100,10 +123,12 @@
                     </div>
 
 
-                    <img>
+                    <div class="test">
+                        <img src="">
                         <div class="overlay">
                             <div class="text"> check </div>
                         </div>
+                    </div>
                 </div>
                 <a href=""> Show all comments </a>
             </div>
